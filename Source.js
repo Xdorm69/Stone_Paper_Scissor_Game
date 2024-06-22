@@ -21,9 +21,11 @@ const showWinner = (userWin) => {
         console.log("you win!");
         let audio = new Audio("win.mp3");
         audio.play();
-        let audio2 = new Audio("bg.mp3");
-        audio2.play();
-        userScore++
+        if (userScore == 0){
+           let audio2 = new Audio("bg.mp3");
+        audio2.play(); 
+        }     
+        userScore++;
         userScorePara.innerText = userScore;
     }
     else {
